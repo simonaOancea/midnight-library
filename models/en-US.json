@@ -1,0 +1,391 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "midnight library",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "NameIntent",
+                    "slots": [
+                        {
+                            "name": "name",
+                            "type": "AMAZON.FirstName"
+                        }
+                    ],
+                    "samples": [
+                        "You better call me {name}",
+                        "They call me {name}",
+                        "I'm named {name}",
+                        "You can call me {name}",
+                        "{name}",
+                        "My name is {name}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "BookInformationIntent",
+                    "slots": [
+                        {
+                            "name": "title",
+                            "type": "AMAZON.Book"
+                        }
+                    ],
+                    "samples": [
+                        "get the book {title}",
+                        "I want to know about {title}",
+                        "Tell me about the {title}",
+                        "Tell me about {title}",
+                        "get book {title}"
+                    ]
+                },
+                {
+                    "name": "BookRatingIntent",
+                    "slots": [
+                        {
+                            "name": "rating",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "What is the book {rating}",
+                        "What is the {rating}",
+                        "What's the {rating}"
+                    ]
+                },
+                {
+                    "name": "BookSummaryIntent",
+                    "slots": [
+                        {
+                            "name": "summary",
+                            "type": "AMAZON.WrittenCreativeWorkType"
+                        }
+                    ],
+                    "samples": [
+                        "Tell me a short {summary}",
+                        "I want to hear a short {summary}",
+                        "Give me a short {summary}",
+                        "I want a short {summary}",
+                        "I want to hear the {summary}",
+                        "I want {summary}",
+                        "I want a {summary}",
+                        "Tell me the {summary}",
+                        "Give me a {summary}",
+                        "I want to hear a {summary}"
+                    ]
+                },
+                {
+                    "name": "BookAuthorIntent",
+                    "slots": [
+                        {
+                            "name": "author",
+                            "type": "AMAZON.Author"
+                        }
+                    ],
+                    "samples": [
+                        "Who's the {author}",
+                        "Who is the {author}"
+                    ]
+                },
+                {
+                    "name": "BookRecommendationMatchIntent",
+                    "slots": [
+                        {
+                            "name": "age_group",
+                            "type": "ageGroupType",
+                            "samples": [
+                                "a {age_group} book",
+                                "I would like a {age_group} book",
+                                "{age_group} book",
+                                "{age_group}",
+                                "an {age_group} book",
+                                "Give me an {age_group} book",
+                                "I would like an {age_group} book",
+                                "I want an {age_group} book"
+                            ]
+                        },
+                        {
+                            "name": "book_type",
+                            "type": "bookType",
+                            "samples": [
+                                "I would like a {book_type} recommendation",
+                                "Give me a {book_type} recommendation",
+                                "I want a {book_type} recommendation",
+                                "Give me a {book_type} book",
+                                "{book_type} book",
+                                "I would like a {book_type} book",
+                                "{book_type}",
+                                "I want a {book_type} book"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "I want a {age_group} {book_type}",
+                        "I want an {age_group} {book_type} recommendation",
+                        "I want an {age_group} {book_type}",
+                        "I want a {age_group} {book_type} recommendation",
+                        "{book_type}",
+                        "{book_type} book",
+                        "I want a {book_type} book",
+                        "I want a book recommendation",
+                        "I need a book suggestion",
+                        "Tell me what to read"
+                    ]
+                },
+                {
+                    "name": "ExplainBookTypesIntent",
+                    "slots": [
+                        {
+                            "name": "options",
+                            "type": "optionType"
+                        }
+                    ],
+                    "samples": [
+                        "What {options} do I have",
+                        "I want to know the {options} that I can choose from",
+                        "I want to know the {options}",
+                        "Tell me the {options}",
+                        "I want to hear the {options}",
+                        "Give me some {options}",
+                        "What are the {options}",
+                        "What can I choose",
+                        "What are the available {options}",
+                        "What are the {options} that I can choose from"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "bookType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "cook"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "novel"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "fairy tale"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "literary fiction"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "historical fiction"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "thriller"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "mystery"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "horror"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "science fiction"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "autobiography"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "self-help"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "romance"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "fantasy"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "non-fictional"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "fictional"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ageGroupType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "kid",
+                                "synonyms": [
+                                    "toddler",
+                                    "child"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "teenager",
+                                "synonyms": [
+                                    "young person",
+                                    "adolescent",
+                                    "teen"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "adult",
+                                "synonyms": [
+                                    "grown man",
+                                    "grown woman",
+                                    "grown-up person"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "optionType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "examples"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "choices"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "alternatives"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "options"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "AMAZON.WrittenCreativeWorkType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "summary",
+                                "synonyms": [
+                                    "story",
+                                    "resume",
+                                    "abstract"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "BookRecommendationMatchIntent",
+                    "delegationStrategy": "SKILL_RESPONSE",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "age_group",
+                            "type": "ageGroupType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1551780932410.941217777979"
+                            }
+                        },
+                        {
+                            "name": "book_type",
+                            "type": "bookType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1551780932410.692816351563"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1551780932410.692816351563",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What type of book are you interested in?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What genre are you interested in?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1551780932410.941217777979",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Would you prefer an adult or a children's book?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Are you looking for an adult, teenager, or kids' book?"
+                    }
+                ]
+            }
+        ]
+    }
+}
